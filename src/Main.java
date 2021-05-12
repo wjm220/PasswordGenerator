@@ -1,16 +1,16 @@
+import javax.swing.*;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    public static void main(String[] args) {
-        long startTime = System.nanoTime();
-
-        for (int i = 0; i < 1_000_000; i++) {
-            String password = PasswordGenerator.generatePassword(12, true, true, true);
-            System.out.println(password);
-        }
-
-        long elapsedTime = TimeUnit.SECONDS.convert(System.nanoTime() - startTime, TimeUnit.NANOSECONDS);
-        System.out.println("\nCompleted in " + String.valueOf((double) (System.nanoTime() - startTime) / 1_000_000_000) + "s");
+    public static void main (String[] args) {
+        JFrame frame = new JFrame("Secure Password Generator");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(new GUI());
+        frame.pack();
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setIconImage(new ImageIcon("C:\\Users\\Will\\IdeaProjects\\PasswordGenerator\\img\\lock.png").getImage());
     }
 }
