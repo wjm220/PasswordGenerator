@@ -25,7 +25,11 @@ public class PasswordGenerator {
 
         while (true) {
             for (int i = 0; i < length; i++) {
+
+                // Generates a random integer in range 0 to passwordCharacters.length()
                 int random_index = rng.nextInt(passwordCharacters.length());
+
+                // This number is then used as an index to obtain a character from the passwordCharacters String
                 password.append(passwordCharacters.charAt(random_index));
             }
 
