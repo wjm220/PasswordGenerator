@@ -1,6 +1,8 @@
 import java.security.SecureRandom;
 
 public class PasswordGenerator {
+    
+    // Represents the different character types that can be used in a password
     enum Characters {
         LETTERS,
         DIGITS,
@@ -13,7 +15,9 @@ public class PasswordGenerator {
     private static final String SPECIAL_CHARACTERS = "+-*/|%$@&#!?`'\\\"~=^<>:;,._[]{}()";
 
     private PasswordGenerator() { }
-
+    
+    // The standard generatePassword() method - accepts only the password length as an argument
+    // Uses letters, digits and special characters
     public static String generatePassword(int length) {
         // Check the password length - must be less than 128 and greater than 10
         if (length > 128 || length < 10) {
@@ -42,7 +46,9 @@ public class PasswordGenerator {
 
         return password.toString();
     }
-
+    
+    // Accepts a Characters argument 
+    // Uses only the single Characters type provided in password
     public static String generatePassword(int length, Characters c) {
         if (length > 128 || length < 10) {
             throw new IllegalArgumentException("Password length must be in range (10 <= length <= 128)");
@@ -76,7 +82,9 @@ public class PasswordGenerator {
 
         return password.toString();
     }
-
+    
+    // Accepts two Characters arguments
+    // Uses both Characters types provided in password
     public static String generatePassword(int length, Characters c1, Characters c2) {
         if (length > 128 || length < 10) {
             throw new IllegalArgumentException("Password length must be in range (10 <= length <= 128)");
