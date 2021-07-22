@@ -41,10 +41,10 @@ public class GUI extends JPanel {
         lengthSlider.setPaintTicks(true);
         lengthSlider.setPaintLabels(true);
 
-        ImageIcon refreshIcon = new ImageIcon("C:\\Users\\Will\\IdeaProjects\\PasswordGenerator\\img\\refresh.png");
+        ImageIcon refreshIcon = new ImageIcon("..\\img\\refresh.png");
         refreshButton.setIcon(refreshIcon);
 
-        ImageIcon copyIcon = new ImageIcon("C:\\Users\\Will\\IdeaProjects\\PasswordGenerator\\img\\copy.png");
+        ImageIcon copyIcon = new ImageIcon("..\\img\\copy.png");
         copyButton.setIcon(copyIcon);
 
         letterRadio.setSelected(true);
