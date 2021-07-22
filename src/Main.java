@@ -9,6 +9,6 @@ public class Main {
         frame.pack();
         frame.setVisible(true);
         frame.setResizable(false);
-        frame.setIconImage(new ImageIcon("C:\\Users\\Will\\IdeaProjects\\PasswordGenerator\\img\\lock.png").getImage());
+        frame.setIconImage(new ImageIcon("..\\img\\lock.png").getImage());
     }
 }
